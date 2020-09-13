@@ -1,0 +1,67 @@
+@import "../mixins.scss";
+.messagesender {
+  display: flex;
+  margin-top: 30px;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 15px;
+  box-shadow: 0px 5px 7px -7px rgba(0, 0, 0, 0.75);
+  width: 73%;
+
+  @include respond(phone) {
+    margin-left: 45px;
+    width: 105%;
+  }
+}
+
+.messagesender__top {
+  display: flex;
+  border-bottom: 1px solid #eff2f5;
+  padding: 15px;
+}
+
+.messagesender__top > form {
+  flex: 1;
+  display: flex;
+  @include respond(phone) {
+    flex-direction: column;
+  }
+}
+.messagesender__top > form > input {
+  outline-width: 0;
+  border: none;
+  padding: 0 20px;
+  margin: 0 10px;
+  border-radius: 999px;
+  background-color: #eff2f5;
+  @include respond(phone) {
+    padding: 10px 20px;
+    margin-bottom: 20px;
+  }
+}
+.messagesender__top > form > button {
+  display: none;
+}
+
+.messagesender__input {
+  flex: 1;
+}
+.messagesender__option {
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px;
+  align-items: center;
+  color: rgb(87, 87, 87);
+  margin: 5px;
+
+  & > .MuiSvgIcon-root {
+    @include respond(phone) {
+      font-size: 12px;
+    }
+  }
+  & > h2 {
+    @include respond(phone) {
+      font-size: 12px;
+    }
+  }
+}

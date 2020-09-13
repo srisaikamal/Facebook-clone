@@ -1,0 +1,15 @@
+@import "../mixins.scss";
+.storyreel {
+  display: flex;
+  @include respond(phone) {
+    display: none;
+  }
+}
+.storyreel-phone {
+  display: none;
+  @include respond(phone) {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+}
